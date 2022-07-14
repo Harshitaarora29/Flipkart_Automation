@@ -2,7 +2,6 @@ package com.FresherTraining_ExitTest.tests;
 
 import java.util.HashMap;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -14,7 +13,7 @@ public class LoginTest extends BaseTest
 {
 	
 
-	// Worksheet Name used by all tests
+	// Work sheet Name used by all tests
     private String sheetName = prop.getProperty("LoginTestSheetName");   
 		
 	
@@ -53,11 +52,6 @@ public class LoginTest extends BaseTest
 		sa.assertEquals(actualUrl,expectedUrl);
 		sa.assertEquals(actualTitle,expectedTitle);
 		sa.assertAll();
-
-//		String actualTitle = driver.getTitle().toLowerCase();
-//		String actualUrl = driver.getCurrentUrl();
-//        Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
-//                "Assertion on actual and expected title of Login page.");
 
 	}
 	

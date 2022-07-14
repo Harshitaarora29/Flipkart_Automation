@@ -2,6 +2,7 @@ package com.FresherTraining_ExitTest.tests;
 
 import java.util.HashMap;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.FresherTraining_ExitTest.pages.GroceryPage;
@@ -19,6 +20,11 @@ public class GroceryTest extends BaseTest
 			GroceryPage groc = new GroceryPage(driver);
 			groc.Click_X();
 			groc.Click_Grocery();
+//			
+//			String actualTitle = driver.getTitle().toLowerCase();
+//	        Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
+//	                "Assertion on actual and expected title of Electronics page.");
+			//Flipkart Grocery Store - Buy Groceries Online & Get Rs.1 Deals at Flipkart.com
 		}
 		
 		@Test (priority=2,groups= {"sanity"})
