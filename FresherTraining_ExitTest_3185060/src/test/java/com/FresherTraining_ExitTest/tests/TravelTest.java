@@ -11,15 +11,7 @@ public class TravelTest extends BaseTest
 	// Worksheet Name used by all tests
     private String sheetName = prop.getProperty("TravelTestSheetName");
 	
-	//@Test (priority=1,groups= {"sanity"})
-	public void Open_Travel() throws InterruptedException
-	{
-		TravelPage travel = new TravelPage(driver);
-		travel.Click_X();
-		travel.Click_Travel();
-	}
-	
-	@Test (priority=2,groups= {"sanity"})
+	@Test (priority=1,groups= {"sanity"})
 	public void ValidCities() throws InterruptedException
 	{
 		String testname = "ValidCities";
@@ -45,7 +37,7 @@ public class TravelTest extends BaseTest
 		travel.Enter_ArrivalCity(ArrivalCity);
 	}
 	
-	//@Test (priority=3,groups= {"sanity"})
+	@Test (priority=2,groups= {"sanity"})
 	public void InvalidCities() throws InterruptedException
 	{
 		String testname = "InvalidCities";
@@ -71,31 +63,4 @@ public class TravelTest extends BaseTest
 		travel.Enter_ArrivalCity(ArrivalCity);
 	}
 	
-	//@Test (priority=5,groups= {"sanity"})
-	public void Economy_TravellerClass() throws InterruptedException
-	{
-		TravelPage travel = new TravelPage(driver);
-		travel.Click_X();
-		travel.Click_Travel();
-		travel.Click_TravellerClass();
-		travel.Select_Economy();
-	}
-	
-	//@Test (priority=6,groups= {"sanity"})
-	public void PremiumEconomy_TravellerClass() throws InterruptedException
-	{
-		TravelPage travel = new TravelPage(driver);
-		travel.Click_X();
-		travel.Click_Travel();
-		travel.Select_PremiumEconomy();
-	}
-	
-	//@Test (priority=7,groups= {"sanity"})
-	public void Business_TravellerClass() throws InterruptedException
-	{
-		TravelPage travel = new TravelPage(driver);
-		travel.Click_X();
-		travel.Click_Travel();
-		travel.Select_Business();
-	}
 }

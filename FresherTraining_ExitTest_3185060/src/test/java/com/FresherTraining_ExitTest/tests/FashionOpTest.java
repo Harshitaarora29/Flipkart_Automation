@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.FresherTraining_ExitTest.pages.FashionOpPage;
 import com.FresherTraining_ExitTest.utils.CommonUtils;
+import com.FresherTraining_ExitTest.utils.ExplicitWait;
 
 public class FashionOpTest extends BaseTest
 {
@@ -15,16 +16,7 @@ public class FashionOpTest extends BaseTest
     private String sheetName = prop.getProperty("FashionTestSheetName");   
 		
 	
-	//@Test (priority=1,groups= {"sanity"})
-	public void CheckFashionOp() throws InterruptedException
-	{	
-		FashionOpPage fas = new FashionOpPage(driver);
-		fas.Click_X();
-		fas.Hover_FashionOp();
-		
-	}
-	
-	//@Test (priority=2,groups= {"sanity"})
+	@Test (priority=1,groups= {"sanity"})
 	public void Check_MensFashion_Op() throws InterruptedException
 	{
 		String testname = "Men's Fashion";
@@ -45,6 +37,7 @@ public class FashionOpTest extends BaseTest
 		fas.Click_X();
 		fas.Hover_FashionOp();
 		fas.Click_MensFashion();
+		ExplicitWait.checkClickableExplicitly(driver, expectedTitle, 5);
 		
 		String actualTitle = driver.getTitle().toLowerCase();
         Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
@@ -52,7 +45,7 @@ public class FashionOpTest extends BaseTest
 
 	}
 	
-	@Test (priority=3,groups= {"sanity"})
+	@Test (priority=2,groups= {"sanity"})
 	public void Check_WomenWestern_Option() throws InterruptedException
 	{
 		
@@ -74,36 +67,12 @@ public class FashionOpTest extends BaseTest
 		fas.Click_X();
 		fas.Hover_FashionOp();
 		fas.Click_WomenWestern();
+		ExplicitWait.checkClickableExplicitly(driver, expectedTitle, 5);
 		
 		String actualTitle = driver.getTitle().toLowerCase();
         Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
                 "Assertion on actual and expected title of Fashion page.");
 	}
 	
-	//@Test (priority=4,groups= {"sanity"})
-	public void Check_WomensEthnic_Option() throws InterruptedException
-	{
-		String testname = "WomensEthnic";
 
-        // Fetching all test data from excel file
-        HashMap<String, String> testData = new HashMap<String, String>();
-        testData = reader.getRowTestData(sheetName, testname);
-        String executionRequired = testData.get("Execution Required").toLowerCase();
-
-        String expectedTitle = testData.get("Expected Title");
-        // log all data
-        CommonUtils.logTestData(sheetName, testname);
-
-        // if execution required field is no
-        CommonUtils.toCheckExecutionRequired(executionRequired);
-		
-		FashionOpPage fas = new FashionOpPage(driver);
-		fas.Click_X();
-		fas.Hover_FashionOp();
-		fas.Click_WomenEthnic();
-		
-		String actualTitle = driver.getTitle().toLowerCase();
-        Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
-                "Assertion on actual and expected title of Fashion page.");
-	}
 }

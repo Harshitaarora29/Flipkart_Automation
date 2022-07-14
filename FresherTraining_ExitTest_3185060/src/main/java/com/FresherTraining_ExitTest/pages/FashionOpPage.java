@@ -74,9 +74,5 @@ public class FashionOpPage
 		Thread.sleep(5000);	
 	}
 	
-	
-	//scrolldown
-//	Actions keyDown = new Actions(driver);
-//	keyDown.sendKeys(Keys.chord(Keys.DOWN, Keys.DOWN,Keys.DOWN)).perform();
-//	Thread.sleep(5000);	
+
 }

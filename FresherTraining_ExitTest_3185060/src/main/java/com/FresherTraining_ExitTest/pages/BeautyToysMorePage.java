@@ -28,12 +28,7 @@ public class BeautyToysMorePage
 	
 	@FindBy (how=How.XPATH,using="//a[normalize-space()='Food & Drinks']")
 	public WebElement Food_and_Drinks  ;
-	
-	@FindBy (how=How.XPATH,using="//a[normalize-space()='Baby Care']")
-	public WebElement BabyCare  ;
-	
-	@FindBy (how=How.XPATH,using="//a[@class='_6WOcW9'][normalize-space()='Books']")
-	public WebElement Books ;
+
 	
 	
 	public void Click_X() throws InterruptedException
@@ -53,23 +48,6 @@ public class BeautyToysMorePage
 	{
 		Actions action = new Actions(driver);
 		action.moveToElement(Beauty_Personal_Care);
-		action.click().build().perform();
-		Thread.sleep(5000);	
-	}
-	
-	public void Click_BabyCare () throws InterruptedException
-	{
-		Actions action = new Actions(driver);
-		action.moveToElement(BabyCare);
-		action.click().build().perform();
-		Thread.sleep(5000);	
-	}
-	
-
-	public void Click_Books () throws InterruptedException
-	{
-		Actions action = new Actions(driver);
-		action.moveToElement( Books);
 		action.click().build().perform();
 		Thread.sleep(5000);	
 	}

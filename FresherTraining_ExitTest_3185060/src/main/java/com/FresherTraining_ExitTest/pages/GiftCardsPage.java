@@ -28,12 +28,6 @@ public class GiftCardsPage
 	@FindBy (how=How.XPATH,using="(//img[@alt='physical'])[2]")
 	public WebElement PhysicalGiftCards;
 	
-	@FindBy (how=How.XPATH,using="(//img[@alt='anniversary'])[2]")
-	public WebElement AnniversaryGiftCards;
-	
-	@FindBy (how=How.XPATH,using="(//img[@alt='birthday'])[2]")
-	public WebElement BirthdayGiftCards;
-
 	
 	public void Click_X() throws InterruptedException
 	{
@@ -58,17 +52,5 @@ public class GiftCardsPage
 		PhysicalGiftCards.click();
 		Thread.sleep(2000);		
 	}
-	
-	public void Click_AnniversaryGiftCards() throws InterruptedException
-	{		
-		AnniversaryGiftCards.click();
-		Thread.sleep(2000);		
-	}
-	
-	public void Click_BirthdayGiftCards() throws InterruptedException
-	{		
-		BirthdayGiftCards.click();
-		Thread.sleep(2000);		
-	}
-	
+
 }

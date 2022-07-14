@@ -86,24 +86,4 @@ WebDriver driver;
 		Thread.sleep(2000);
 	}
 	
-	public void Select_Economy() throws InterruptedException
-	{
-		EconomyOp.click();
-		DoneButton.click();
-		Thread.sleep(2000);
-	}
-	
-	public void Select_PremiumEconomy() throws InterruptedException
-	{
-		PremiumOp.click();
-		DoneButton.click();
-		Thread.sleep(2000);
-	}
-	
-	public void Select_Business() throws InterruptedException
-	{
-		BusinessOp.click();
-		DoneButton.click();
-		Thread.sleep(2000);
-	}
 }

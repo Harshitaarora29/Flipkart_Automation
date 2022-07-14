@@ -64,20 +64,5 @@ public class HomePage
 		action.click().build().perform();
 		Thread.sleep(5000);	
 	}
-	
-	public void Click_HomeDecor() throws InterruptedException
-	{
-		Actions action = new Actions(driver);
-		action.moveToElement(HomeDecor);
-		action.click().build().perform();
-		Thread.sleep(5000);	
-	}
-	
-	public void Click_Bedroom_Furniture() throws InterruptedException
-	{
-		Actions action = new Actions(driver);
-		action.moveToElement(Bedroom_Furniture);
-		action.click().build().perform();
-		Thread.sleep(5000);	
-	}
+
 }

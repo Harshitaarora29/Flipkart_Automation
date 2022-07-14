@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.FresherTraining_ExitTest.pages.GroceryPage;
 import com.FresherTraining_ExitTest.utils.CommonUtils;
+import com.FresherTraining_ExitTest.utils.ExplicitWait;
 
 public class GroceryTest extends BaseTest
 {
@@ -14,20 +15,8 @@ public class GroceryTest extends BaseTest
 	// Work sheet Name used by all tests
     private String sheetName = prop.getProperty("GroceryTestSheetName");   
     
-		@Test (priority=1,groups= {"sanity"})
-		public void Check_Grocery_Op() throws InterruptedException
-		{
-			GroceryPage groc = new GroceryPage(driver);
-			groc.Click_X();
-			groc.Click_Grocery();
-//			
-//			String actualTitle = driver.getTitle().toLowerCase();
-//	        Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
-//	                "Assertion on actual and expected title of Electronics page.");
-			//Flipkart Grocery Store - Buy Groceries Online & Get Rs.1 Deals at Flipkart.com
-		}
 		
-		@Test (priority=2,groups= {"sanity"})
+		@Test (priority=1,groups= {"sanity"})
 		public void ValidProduct() throws InterruptedException
 		{
 			String testname = "ValidProduct";
@@ -38,7 +27,7 @@ public class GroceryTest extends BaseTest
 	        String executionRequired = testData.get("Execution Required").toLowerCase();
 	        String Product = testData.get("Grocery Products");
 	        
-	        
+	        String expectedTitle = testData.get("Expected Title");
 	     // log all data
 	        CommonUtils.logTestData(sheetName, testname);
 
@@ -49,11 +38,18 @@ public class GroceryTest extends BaseTest
 			groc.Click_X();
 			groc.Click_Grocery();
 			groc.Enter_Groceries(Product);
+			ExplicitWait.checkClickableExplicitly(driver, expectedTitle, 5);
+		
+			
+			String actualTitle = driver.getTitle().toLowerCase();
+	        Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
+	                "Assertion on actual and expected title of Electronics page.");
 			
 		}
 		
-		//@Test (priority=3,groups= {"sanity"})
-		public void Check_PocoMobiles_Op() throws InterruptedException
+		//Negative Case
+		@Test (priority=2,groups= {"sanity"})
+		public void InvalidProduct() throws InterruptedException
 		{
 			String testname = "InvalidProduct";
 
@@ -63,7 +59,7 @@ public class GroceryTest extends BaseTest
 	        String executionRequired = testData.get("Execution Required").toLowerCase();
 	        String Product = testData.get("Grocery Products");
 	        
-	        
+	        String expectedTitle = testData.get("Expected Title");
 	     // log all data
 	        CommonUtils.logTestData(sheetName, testname);
 
@@ -74,5 +70,11 @@ public class GroceryTest extends BaseTest
 			groc.Click_X();
 			groc.Click_Grocery();
 			groc.Enter_Groceries(Product);
+			ExplicitWait.checkClickableExplicitly(driver, expectedTitle, 5);
+			
+			//Assertion will fail
+			String actualTitle = driver.getTitle().toLowerCase();
+	        Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
+	                "Assertion on actual and expected title of Electronics page.");
 		}
 }
