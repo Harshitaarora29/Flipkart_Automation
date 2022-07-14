@@ -1,62 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="9" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-14T15:25:57 IST" name="Default suite" finished-at="2022-07-14T15:26:10 IST" duration-ms="12847">
+  <suite started-at="2022-07-14T22:09:32 IST" name="Suite" finished-at="2022-07-14T22:13:03 IST" duration-ms="211488">
     <groups>
+      <group name="social">
+        <method signature="SocialPlatformsTest.Open_FaceBook()[pri:1, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" name="Open_FaceBook" class="com.FresherTraining_ExitTest.tests.SocialPlatformsTest"/>
+        <method signature="SocialPlatformsTest.Open_Twitter()[pri:2, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" name="Open_Twitter" class="com.FresherTraining_ExitTest.tests.SocialPlatformsTest"/>
+        <method signature="SocialPlatformsTest.Open_YouTube()[pri:3, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" name="Open_YouTube" class="com.FresherTraining_ExitTest.tests.SocialPlatformsTest"/>
+      </group> <!-- social -->
       <group name="sanity">
-        <method signature="CartTest.OpenCart()[pri:1, instance:com.FresherTraining_ExitTest.tests.CartTest@73173f63]" name="OpenCart" class="com.FresherTraining_ExitTest.tests.CartTest"/>
+        <method signature="TravelTest.InvalidCities()[pri:2, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" name="InvalidCities" class="com.FresherTraining_ExitTest.tests.TravelTest"/>
+        <method signature="TravelTest.ValidCities()[pri:1, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" name="ValidCities" class="com.FresherTraining_ExitTest.tests.TravelTest"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2022-07-14T15:25:57 IST" name="Default test" finished-at="2022-07-14T15:26:10 IST" duration-ms="12847">
-      <class name="com.FresherTraining_ExitTest.tests.CartTest">
-        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.FresherTraining_ExitTest.tests.CartTest@73173f63]" started-at="2022-07-14T15:25:57 IST" name="setExtent" finished-at="2022-07-14T15:25:57 IST" duration-ms="113" status="PASS">
+    <test started-at="2022-07-14T22:09:32 IST" name="Test" finished-at="2022-07-14T22:13:03 IST" duration-ms="211488">
+      <class name="com.FresherTraining_ExitTest.tests.TravelTest">
+        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:09:32 IST" name="setExtent" finished-at="2022-07-14T22:09:32 IST" duration-ms="111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtent -->
-        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.FresherTraining_ExitTest.tests.CartTest@73173f63]" started-at="2022-07-14T15:25:57 IST" name="initializeDriver" finished-at="2022-07-14T15:25:59 IST" duration-ms="1802" status="PASS">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:09:32 IST" name="initializeDriver" finished-at="2022-07-14T22:09:36 IST" duration-ms="3734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method is-config="true" signature="openUrl()[pri:0, instance:com.FresherTraining_ExitTest.tests.CartTest@73173f63]" started-at="2022-07-14T15:25:59 IST" name="openUrl" finished-at="2022-07-14T15:26:01 IST" duration-ms="2422" status="PASS">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:09:36 IST" name="openUrl" finished-at="2022-07-14T22:10:45 IST" duration-ms="69579" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openUrl -->
-        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:com.FresherTraining_ExitTest.tests.CartTest@73173f63]" started-at="2022-07-14T15:26:01 IST" name="startTest" finished-at="2022-07-14T15:26:01 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:10:45 IST" name="startTest" finished-at="2022-07-14T22:10:45 IST" duration-ms="15" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.FresherTraining_ExitTest.tests.CartTest.OpenCart() throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.FresherTraining_ExitTest.tests.TravelTest.ValidCities() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method signature="OpenCart()[pri:1, instance:com.FresherTraining_ExitTest.tests.CartTest@73173f63]" started-at="2022-07-14T15:26:01 IST" name="OpenCart" finished-at="2022-07-14T15:26:06 IST" duration-ms="4403" status="PASS">
+        <test-method signature="ValidCities()[pri:1, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:10:45 IST" name="ValidCities" finished-at="2022-07-14T22:10:55 IST" duration-ms="10073" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OpenCart -->
-        <test-method is-config="true" signature="ResultTest(org.testng.ITestResult)[pri:0, instance:com.FresherTraining_ExitTest.tests.CartTest@73173f63]" started-at="2022-07-14T15:26:06 IST" name="ResultTest" finished-at="2022-07-14T15:26:06 IST" duration-ms="5" status="PASS">
+        </test-method> <!-- ValidCities -->
+        <test-method is-config="true" signature="ResultTest(org.testng.ITestResult)[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:10:55 IST" name="ResultTest" finished-at="2022-07-14T22:10:55 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=OpenCart status=SUCCESS method=CartTest.OpenCart()[pri:1, instance:com.FresherTraining_ExitTest.tests.CartTest@73173f63] output={null}]]]>
+                <![CDATA[[TestResult name=ValidCities status=SUCCESS method=TravelTest.ValidCities()[pri:1, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ResultTest -->
-        <test-method is-config="true" signature="testClose()[pri:0, instance:com.FresherTraining_ExitTest.tests.CartTest@73173f63]" started-at="2022-07-14T15:26:06 IST" name="testClose" finished-at="2022-07-14T15:26:10 IST" duration-ms="4170" status="PASS">
+        <test-method is-config="true" signature="testClose()[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:10:55 IST" name="testClose" finished-at="2022-07-14T22:10:56 IST" duration-ms="858" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClose -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.FresherTraining_ExitTest.tests.CartTest@73173f63]" started-at="2022-07-14T15:26:10 IST" name="endReport" finished-at="2022-07-14T15:26:10 IST" duration-ms="203" status="PASS">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:10:56 IST" name="initializeDriver" finished-at="2022-07-14T22:10:59 IST" duration-ms="2622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:10:59 IST" name="openUrl" finished-at="2022-07-14T22:11:09 IST" duration-ms="10451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:11:09 IST" name="startTest" finished-at="2022-07-14T22:11:09 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.FresherTraining_ExitTest.tests.TravelTest.InvalidCities() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="InvalidCities()[pri:2, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:11:09 IST" name="InvalidCities" finished-at="2022-07-14T22:11:19 IST" duration-ms="9792" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidCities -->
+        <test-method is-config="true" signature="ResultTest(org.testng.ITestResult)[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:11:19 IST" name="ResultTest" finished-at="2022-07-14T22:11:19 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=InvalidCities status=SUCCESS method=TravelTest.InvalidCities()[pri:2, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResultTest -->
+        <test-method is-config="true" signature="testClose()[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:11:19 IST" name="testClose" finished-at="2022-07-14T22:11:20 IST" duration-ms="948" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClose -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.FresherTraining_ExitTest.tests.TravelTest@4febb875]" started-at="2022-07-14T22:13:03 IST" name="endReport" finished-at="2022-07-14T22:13:04 IST" duration-ms="400" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- com.FresherTraining_ExitTest.tests.CartTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.FresherTraining_ExitTest.tests.TravelTest -->
+      <class name="com.FresherTraining_ExitTest.tests.SocialPlatformsTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:11:20 IST" name="initializeDriver" finished-at="2022-07-14T22:11:23 IST" duration-ms="2914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:11:23 IST" name="openUrl" finished-at="2022-07-14T22:11:57 IST" duration-ms="33800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="Open_FaceBook()[pri:1, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:11:57 IST" name="Open_FaceBook" finished-at="2022-07-14T22:12:06 IST" duration-ms="9679" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Open_FaceBook -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:11:57 IST" name="startTest" finished-at="2022-07-14T22:11:57 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.FresherTraining_ExitTest.tests.SocialPlatformsTest.Open_FaceBook() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method is-config="true" signature="ResultTest(org.testng.ITestResult)[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:06 IST" name="ResultTest" finished-at="2022-07-14T22:12:06 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Open_FaceBook status=SUCCESS method=SocialPlatformsTest.Open_FaceBook()[pri:1, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResultTest -->
+        <test-method is-config="true" signature="testClose()[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:06 IST" name="testClose" finished-at="2022-07-14T22:12:21 IST" duration-ms="14545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClose -->
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:21 IST" name="initializeDriver" finished-at="2022-07-14T22:12:24 IST" duration-ms="2823" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:24 IST" name="openUrl" finished-at="2022-07-14T22:12:28 IST" duration-ms="4329" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="Open_Twitter()[pri:2, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:28 IST" name="Open_Twitter" finished-at="2022-07-14T22:12:42 IST" duration-ms="14388" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Open_Twitter -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:28 IST" name="startTest" finished-at="2022-07-14T22:12:28 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.FresherTraining_ExitTest.tests.SocialPlatformsTest.Open_Twitter() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method is-config="true" signature="testClose()[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:42 IST" name="testClose" finished-at="2022-07-14T22:12:44 IST" duration-ms="1082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClose -->
+        <test-method is-config="true" signature="ResultTest(org.testng.ITestResult)[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:42 IST" name="ResultTest" finished-at="2022-07-14T22:12:42 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Open_Twitter status=SUCCESS method=SocialPlatformsTest.Open_Twitter()[pri:2, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResultTest -->
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:44 IST" name="initializeDriver" finished-at="2022-07-14T22:12:46 IST" duration-ms="2809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:46 IST" name="openUrl" finished-at="2022-07-14T22:12:50 IST" duration-ms="3812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:50 IST" name="startTest" finished-at="2022-07-14T22:12:50 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.FresherTraining_ExitTest.tests.SocialPlatformsTest.Open_YouTube() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="Open_YouTube()[pri:3, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:12:50 IST" name="Open_YouTube" finished-at="2022-07-14T22:13:02 IST" duration-ms="12078" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Open_YouTube -->
+        <test-method is-config="true" signature="ResultTest(org.testng.ITestResult)[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:13:02 IST" name="ResultTest" finished-at="2022-07-14T22:13:02 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Open_YouTube status=SUCCESS method=SocialPlatformsTest.Open_YouTube()[pri:3, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResultTest -->
+        <test-method is-config="true" signature="testClose()[pri:0, instance:com.FresherTraining_ExitTest.tests.SocialPlatformsTest@b78a709]" started-at="2022-07-14T22:13:02 IST" name="testClose" finished-at="2022-07-14T22:13:03 IST" duration-ms="1101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClose -->
+      </class> <!-- com.FresherTraining_ExitTest.tests.SocialPlatformsTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -13,6 +13,7 @@ mvn clean test
 1. Install Jenkins.war
 2. open cmd with jenkins path and write :
 		java -jre jenkins.war
+
 		
 ## Screenshots 
 ![Jenkins Setup](./photo/Screenshot3.png)
@@ -22,9 +23,9 @@ mvn clean test
 ![Jenkins Setup](./photo/Screenshot2.png)
 
 #### Packages description
-* com.Flipkart_selenium_Pages- Defining all the pages actions and the respective object repository.
-* com.Flipkart_selenium_utils- Defining all the utilities needed for the tests.
-* com.FLipkart_selenium_tests- Defining all the pages tests and assertions.
+* com.FresherTraining_ExitTest_Pages- Defining all the pages actions and the respective object repository.
+* com.FresherTraining_ExitTest_utils- Defining all the utilities needed for the tests.
+* com.FresherTraining_ExitTest_tests- Defining all the pages tests and assertions.
 
 #### Tests.java files description
 **Base_Test** : The main class which defines-
@@ -33,38 +34,61 @@ mvn clean test
 * @BeforeSuite- to set Extent
 * @AfterSuite- to end the report
 
-**Home_Test** : check functions on the homepage of Flipkart. Includes tests:
-* check Flipkart Logo. 
-* check ship button.
-* check cross Button to close the login dialogue box. 
-* check Seach Button.
-* check the sorting by popularity.
-* check Wholesale button.
-* check Paymenttton. 
-* check sellerRegistration Button.
-* check cart button present on Home page.
+**Home_Test** : check functions on the home option on category field of Flipkart. Includes tests:
+* Check HomeFurnishings
+* Check Kitchen and Dining
 
-**Account_Test** : check functions on the account section of Flipkart. 
+**Electronics_Test** : check functions on the electronics option on category section of Flipkart. 
 Includes tests:
-* check wishlist in my profile option.
-* check Mychats in my profile option.
-* click on mobile button.
-* check supercoinZone page by clicking supercoin button 
-* click on grocery button available after login on HomeScreen* click on mobile button  
+* Check Cameras_Accessories
+* Check Audio
+
+**Fashion_Test** : check functions on the fashion option on category section of Flipkart. 
+Includes tests:
+* Check MensFashion
+* Check WomenWestern
+
+**Grocery_Test** : check functions on the grocery option on category section of Flipkart. 
+Includes tests:
+* Check ValidProduct
+* Check InvalidProduct
 
 **Login_test** : Check login functionality by  entering mobilenumber and password and clicking login button present on dialogue box . 
 Includes tests:
 * check login with valid login credentials.
 * check login with Invalid login credentials.
-* check otp button
-* check logout button
+* check BlankMobileNumber
+* check BlankPassword
 
-**MoreOptions_test** : checks the fuctionalities in more option present in home page .
+**MyProfile_test** : checks the fuctionalities of My Profile present in Account .
 Includes tests:
-* check Notification button by clicking and redirect to notificationpreference page
-* check customerService button by clicking and redirect to customerservice page.
+* check CorrectPersonalInfo
+* check Incorrect PersonalInfo
+* check Blank FirstName
+* check Blank LastName
 
-**Flight_test** : check the flight button and the serch button in flight page.
+**NavigationBar_test** : checks the fuctionalities of Navigation Bar visible on Flipkart in Blue Field.
+Includes tests:
+* check OpenBecomeSeller
+* Check FeeStructure
+* Check Services For Seller
+* Check Cart
+* Check Valid_Search
+* Check Invalid_Search
+* Check FlipKartPlus
+
+**SocialPlatform_Test** : check functions of social platform option on Footer section of Flipkart. 
+Includes tests:
+* Open FaceBook
+* Open Twitter
+* Open Youtube
+
+**Travel_test** : check the flight and the search button in flight page.
+Includes tests:
+* Valid Cities
+* Invalid Cities
+
+
 #### Drivers Folder description:
 
 * chromedriver.exe : drivers for chrome

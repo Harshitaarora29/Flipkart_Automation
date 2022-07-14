@@ -70,7 +70,6 @@ public class ElectronicsTest extends BaseTest
 		ExplicitWait.checkClickableExplicitly(driver, expectedTitle, 5);
 		
 		String actualTitle = driver.getTitle().toLowerCase();
-		System.out.println(actualTitle);
 		Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
                 "Assertion on actual and expected title of Electronics page.");
 	}

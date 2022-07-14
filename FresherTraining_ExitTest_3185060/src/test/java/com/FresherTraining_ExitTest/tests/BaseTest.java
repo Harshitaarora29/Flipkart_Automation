@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -23,7 +23,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.log4testng.Logger;
 
 import com.FresherTraining_ExitTest.utils.Excel_Reader;
-
+import com.FresherTraining_ExitTest.utils.Screenshot;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -46,16 +46,15 @@ public class BaseTest
         reader = new Excel_Reader("./Excel/TestData.xlsx");
     }
 
-//    static
-//	{ 
-//		String log4jConfigFile = System.getProperty("user.dir") +
-//			File.separator + "./log4j/log4j2.xml";
-//			Configurator.initialize(null,log4jConfigFile);
-//	}
+    static {
+        String log4jConfigFile = System.getProperty("user.dir")
+               + File.separator + "./log4j/log4j.properties";
+        PropertyConfigurator.configure(log4jConfigFile);
+       }
+    
  // Log4j logger
     public final static Logger logger = Logger.getLogger(BaseTest.class);
-    
-    //config.properties
+
 	static {
 		file = new File("./Resources/config.properties");
 		try {
@@ -119,6 +118,8 @@ public class BaseTest
 				options.addArguments("window-size= 1920, 1080");
 				options.addArguments("--headless");
 				driver = new FirefoxDriver(options);
+				
+
 			}
 			
 			else
@@ -132,6 +133,11 @@ public class BaseTest
 			System.setProperty(prop.getProperty("EdgeDriverProperty"),
 					prop.getProperty("EdgeDriverPath"));
 			driver = new EdgeDriver();
+			
+			//implicit wait
+			String number= prop.getProperty("wait");
+			int num = Integer.parseInt(number);
+			driver.manage().timeouts().implicitlyWait(num, TimeUnit.SECONDS);
 		}
 
 		driver.manage().window().maximize();
@@ -157,9 +163,9 @@ public class BaseTest
 	public void ResultTest(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			// take screenshot
-			//String imagePath = Screenshots.captureScreenshot(driver, result.getName());
-			//extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(imagePath));
-			//extentTest.log(LogStatus.INFO, result.getThrowable());
+			String imagePath = Screenshot.CaptureScreenshot(driver, result.getName());
+			extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(imagePath));
+			extentTest.log(LogStatus.INFO, result.getThrowable());
 
 		}
 		else 

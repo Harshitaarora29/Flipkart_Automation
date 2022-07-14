@@ -15,7 +15,7 @@ public class NavigationBarTest extends BaseTest
 	// Work sheet Name used by all tests
     private String sheetName = prop.getProperty("NavigationTestSheetName");   
 
-	@Test(priority=1,groups= {"sanity"})
+	@Test(priority=1,groups= {"Navigation"})
 	public void OpenBecomeSeller() throws InterruptedException
 	{
 		String testname = "OpenBecomeSeller";
@@ -43,7 +43,7 @@ public class NavigationBarTest extends BaseTest
 		sa.assertAll();
 	}
 	
-	@Test(priority=2,groups= {"sanity"})
+	@Test(priority=2,groups= {"Navigation"})
 	public void CheckFeeStructure() throws InterruptedException
 	{
 		
@@ -76,7 +76,7 @@ public class NavigationBarTest extends BaseTest
 	}
 	
 	//negative case
-	@Test(priority=3,groups= {"sanity"})
+	@Test(priority=3,groups= {"Navigation"})
 	public void Check_Services_For_Seller() throws InterruptedException
 	{
 		
@@ -100,13 +100,14 @@ public class NavigationBarTest extends BaseTest
         op.click_Services();        
         String actualTitle = driver.getTitle();
         
+        System.out.println("Assertion Fail");
     	SoftAssert sa =new SoftAssert();
 		sa.assertEquals(actualTitle,expectedTitle);
 		sa.assertAll();		
 	}
 	
 	
-	@Test (priority=4,groups= {"sanity"})
+	@Test (priority=4,groups= {"Navigation"})
 	public void OpenCart() throws InterruptedException
 	{
 		String testname = "Cart";
@@ -136,7 +137,7 @@ public class NavigationBarTest extends BaseTest
 	}
 	   
     
-	@Test (priority=5,groups= {"sanity"})
+	@Test (priority=5,groups= {"Navigation"})
 	public void Valid_Search() throws InterruptedException
 	{
 		String testname = "Search Valid Product";
@@ -166,7 +167,7 @@ public class NavigationBarTest extends BaseTest
 	}
 	
 	//negative case
-	@Test (priority=6,groups= {"sanity"})
+	@Test (priority=6,groups= {"Navigation"})
 	public void Invalid_Search() throws InterruptedException
 		{
 			String testname = "Search Invalid Product";
@@ -191,14 +192,15 @@ public class NavigationBarTest extends BaseTest
 			ExplicitWait.checkClickableExplicitly(driver, expectedTitle, 5);
 			
 		//Assertion will fail
+			System.out.println("Assertion Fail");
 			String actualTitle = driver.getTitle().toLowerCase();
 	        Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
 	                "Assertion on actual and expected title of search page.");
 		}
 	
 
-	@Test (priority=7,groups= {"sanity"})
-	public void Check_Offer_ProductAt1() throws InterruptedException
+	@Test (priority=7,groups= {"Navigation"})
+	public void Check_FlipKartPlus() throws InterruptedException
 	{
 		NavigationBarPage plus = new NavigationBarPage(driver);
 		plus.Click_X();

@@ -73,6 +73,7 @@ public class GroceryTest extends BaseTest
 			ExplicitWait.checkClickableExplicitly(driver, expectedTitle, 5);
 			
 			//Assertion will fail
+			System.out.println("Assertion Fail");
 			String actualTitle = driver.getTitle().toLowerCase();
 	        Assert.assertTrue(actualTitle.contains(expectedTitle.toLowerCase()),
 	                "Assertion on actual and expected title of Electronics page.");

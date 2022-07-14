@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest
 		
 	
 		
-	@Test (priority=1,groups= {"sanity"})
+	@Test (priority=1,groups= {"Login"})
 	public void validLogin() throws InterruptedException
 	{	
 		String testname = "ValidLogin";
@@ -56,7 +56,7 @@ public class LoginTest extends BaseTest
 	}
 	
 	
-	@Test (priority=2,groups= {"sanity"})
+	@Test (priority=2,groups= {"Login"})
 	public void Invalidlogin() throws InterruptedException
 	{
 		String testname = "InvalidLogin";
@@ -88,7 +88,7 @@ public class LoginTest extends BaseTest
 		sa.assertAll();
 	}
 	
-	@Test (priority=3,groups= {"sanity"})
+	@Test (priority=3,groups= {"Login"})
 	public void BlankMobileNumber() throws InterruptedException
 	{
 		String testname = "BlankMobileNumber";
@@ -120,7 +120,7 @@ public class LoginTest extends BaseTest
 		sa.assertAll();
 	}
 	
-	@Test (priority=4,groups= {"sanity"})
+	@Test (priority=4,groups= {"Login"})
 	public void BlankPassword() throws InterruptedException
 	{
 		String testname = "BlankPassword";
